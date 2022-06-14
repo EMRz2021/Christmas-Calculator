@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Christmas Calculator</title>
+	<link rel="stylesheet" type="text/css" href="Calculator-style.css">
+</head>
+<body>
+  <img src="./IMGs/xxx.jpg" id="snowflake" width="20" height="20">
+  <canvas id="canvas"></canvas>
+  
+  <div class="colors">
+    <p class="selectColor">Select Colors for <br>your Calculator: </p>
+
+    <input class="col1" type="color" name="color1" id="col1" value="#dd0300">
+    
+    <input class="col2" type="color" name="color2" id="col2" value="#fcdd74">
+
+    <input class="col3" type="color" name="color3" id="col3" value="#fcdd74">
+  </div>
+
+  <div id="grid-container">
+    <div id="nos">
+      <div class="item1"><button id="no1" class="btnNo">1</button></div>
+      <div class="item2"><button id="no2" class="btnNo">2</button></div>
+      <div class="item3"><button id="no3" class="btnNo">3</button></div>
+      <div class="item4"><button id="no4" class="btnNo">4</button></div>
+      <div class="item5"><button id="no5" class="btnNo">5</button></div>
+      <div class="item6"><button id="no6" class="btnNo">6</button></div>
+      <div class="item7"><button id="no7" class="btnNo">7</button></div>
+      <div class="item8"><button id="no8" class="btnNo">8</button></div>
+      <div class="item9"><button id="no9" class="btnNo">9</button></div>
+      <div class="item10"><button id="no0" class="btnNo">0</button></div>
+    </div>
+    <div id="ops">
+      <div class="item11"><button id="plus" class="btn">+</button></div>
+      <div class="item12"><button id="minus" class="btn">-</button></div>
+      <div class="item13"><button id="mult" class="btn">*</button></div>
+      <div class="item14"><button id="divis" class="btn">/</button></div>
+      <div class="item15"><button id="percent" class="btn">%</button></div>
+    </div>
+    <div id="others">
+      <div class="item16"><button id="equal" class="btn">=</button></div>
+      <div class="item17"><button id="cancel" class="btn">C</button></div>
+      <div class="item18"><button id="point" class="btn">.</button></div>
+    </div>  
+    
+  </div>
+  <div id="resultDiv">
+    <input type="text" id="firstNo">
+    <input type="text" id="operation" maxlength="1">
+    <input type="text" id="secondNo">
+    <input type="text" id="result" class="result">
+  </div>
+
+  <script type="text/javascript" src="Calculator-script.js">
+	</script>
+</body>
+</html>
+

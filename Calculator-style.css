@@ -1,0 +1,199 @@
+body {
+	background: #b42131;
+	background-image: url(./IMGs/ChristmasBG01.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: top right;
+	margin: 0;
+}
+
+#snowflake {
+    display: none;
+}
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	z-index: -1;
+}
+
+.colors {
+	display: flex;
+	text-align: center;
+	background-color: #0000001a;
+	padding: 0px 10px;
+	border-radius: 15px;
+	position: fixed;
+  	bottom: 35px;
+  	left: 0;
+	box-shadow: 0 0 10px #ece800;
+}
+
+p {
+	font-family: "Bernard MT Condensed";
+	font-size: 1.1rem;
+	color: white;
+	text-shadow: 0px 5px 3px #000;
+}
+
+#col1, #col2, #col3 {
+	display: none;
+	height: 50px;
+	margin: 13.5px 2px;
+	padding: 20px;
+    border: 0;
+}
+
+#col3 {
+	background: rgba(226, 132, 78, 0.7);
+	border-radius: 20px;
+	height: 24px;
+	margin: 25px 0 0 2px;
+	padding: 8px 20px 10px 20px;
+}
+
+.colors:hover > p {
+	display: none;
+  }
+  .colors:hover > #col1, .colors:hover > #col2, .colors:hover > #col3 {
+	  display: block;
+  }
+
+.item1 { grid-area: no1; }
+.item2 { grid-area: no2; }
+.item3 { grid-area: no3; }
+.item4 { grid-area: no4; }
+.item5 { grid-area: no5; }
+.item6 { grid-area: no6; }
+.item7 { grid-area: no7; }
+.item8 { grid-area: no8; }
+.item9 { grid-area: no9; }
+.item10 { grid-area: no0; }
+.item11 { grid-area: plus; }
+.item12 { grid-area: minus; }
+.item13 { grid-area: mult; }
+.item14 { grid-area: divis; }
+.item15 { grid-area: percent; }
+.item16 { grid-area: equal; }
+.item17 { grid-area: cancel; }
+.item18 { grid-area: point; }
+
+#grid-container {
+	width: 400px;
+	height: 79vh;
+	margin: 65px auto 0;
+	padding: 25px 10px 5px 10px;
+}
+
+#nos, #ops, #others {
+	width: 100%;
+	display: grid;
+	grid-gap: 1px;
+}
+
+#nos {
+	height: 40vh;
+	grid-template-areas:
+	'.		.		.		.		no0		no0		.		.		.		.'
+	'.		.		.		no8 	no8		no9		no9		.		.		.'
+	'.		.		no5		no5		no6		no6 	no7		no7		.		.'
+	'.		no1		no1		no2		no2		no3		no3		no4		no4		.'	
+}
+
+#ops {
+	height: 10vh;
+	grid-template-areas:
+	'plus	plus	minus	minus	percent	percent	mult	mult	divis	divis'
+}
+
+#others {
+	height: 25vh;
+	grid-template-areas:
+	'.		.		.		.		equal	equal	.		.		.		.'
+	'.		.		.		.		equal	equal	.		.		.		.'
+	'.		.		.		point	point	cancel	cancel	.		.		.'
+}
+
+button {
+	width: 100%;
+	height: 100%;
+	/* aspect-ratio: 1; */
+	font-family: mistral;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 0;
+	text-align: center;
+}
+
+.btnNo, #col1 {
+	/* clip-path: circle(40% at 50% 50%); */
+	border-radius: 50%;
+	background: rgb(187, 5, 5);
+	border: 0px solid #0000;
+	outline: 0px #0000;
+}
+
+.btn, #col2 {
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+	background: rgb(252, 221, 116);
+}
+
+.btnNo:hover, .btn:hover {
+	cursor: pointer;
+}
+
+.btnNo:active, .btn:active {
+	transform: scale(95%);
+}
+
+#resultDiv {
+	width: 400px;
+	height: 25px;
+	display: flex;
+	justify-content: center;
+	background: rgba(226, 132, 78, 0.2);
+	border-radius: 20px;
+	margin: auto;
+}
+
+#firstNo, #operation, #secondNo, #result {
+	background: #e2844e;
+	width: 21%;
+	font-family: mistral;
+	font-size: 1.3rem;
+	font-weight: bold;
+	text-align: center;
+	border: 0px solid;
+	border-radius: 20px;
+}
+
+#operation {
+	width: 8%;
+}
+
+#result {
+	width: 50%;
+}
+
+
+@media only screen and (max-width: 650px) {
+	.colors {
+		bottom: auto;
+		top: 0;
+	}
+  }
+
+@media only screen and (max-width: 550px) {
+	body {
+		background-image: url(./IMGs/ChristmasBG02.jpg);
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	#grid-container {
+		width: 100%;
+		margin: 65px 15px 0;
+	}
+  }
